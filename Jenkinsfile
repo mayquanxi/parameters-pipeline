@@ -12,13 +12,17 @@ pipeline {
 	stages {
 		stage('TEST') {
 			steps {
-				echo 'this is the ${params.NAME}'
-				echo 'this is the ${params.STATE}'
-				echo 'this is the ${params.SEX}'
-				echo 'this is the ${params.AVAILABLE}'
-				echo 'this is the ${params.PASSWORD}'
+				echo "this is the ${params.NAME}"
+				echo "this is the ${params.STATE}"
+				echo "this is the ${params.SEX}"
+				echo "this is the ${params.AVAILABLE}"
+				echo "this is the ${params.PASSWORD}"
 				echo '-----------------------------'
 				sh 'echo "this is name cmd ${NAME}"'
+				sh 'echo "this is name cmd ${STATE}"'
+				sh 'echo "this is name cmd ${SEX}"'
+				sh 'echo "this is name cmd ${AVAILABLE}"'
+				sh 'echo "this is name cmd ${PASSWORD}"'
 				sh 'echo -----------'
 			}
 		}
