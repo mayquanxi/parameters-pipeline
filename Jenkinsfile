@@ -12,11 +12,8 @@ pipeline {
 	stages {
 		stage('TEST') {
 			steps {
-				echo "this is the ${params.NAME}"
-				echo "this is the ${params.STATE}"
-				echo "this is the ${params.SEX}"
-				echo "this is the ${params.AVAILABLE}"
-				echo "this is the ${params.PASSWORD}"
+				echo "My name: ${params.NAME}, dc: ${params.STATE}, sex: ${params.SEX}, available: ${params.AVAILABLE}, password: ${params.PASSWORD}"
+				echo ""
 				echo '-----------------------------'
 				sh 'echo "this is name cmd ${NAME}"'
 				sh 'echo "this is name cmd ${STATE}"'
