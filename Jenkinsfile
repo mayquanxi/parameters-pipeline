@@ -6,7 +6,7 @@ pipeline {
 		string(name: 'NAME', defaultValue: 'NGUYEN KHAC MANH', description: 'This is field for the Name of you')
 		text(name: 'STATE', defaultValue: 'HCM', description: 'This is field for state you live')
 		choice(name: 'SEX', choices['Male', 'Female', 'Other'], description: 'choose your sex')
-		boolean(name: 'AVAILABLE', defaultValue: true, description: 'youre available')
+		booleanParam(name: 'AVAILABLE', defaultValue: true, description: 'youre available')
 		password(name: 'PASSWORD', defaultValue: 'password', description: 'Enter your password')
 	}
 	stages {
