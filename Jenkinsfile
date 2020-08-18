@@ -20,7 +20,6 @@ pipeline {
 				echo '-----------------------------'
 				sh 'echo "this is name cmd ${NAME}"'
 				sh 'echo -----------'
-				sh 'echo "this is name cmd ${params.NAME}"'
 			}
 		}
 	}
