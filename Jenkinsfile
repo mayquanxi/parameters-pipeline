@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-		label 'ubuntu18_jenkins_slave01'
+		label 'master'
 	}
 	parameters {
 		string(name: 'NAME', defaultValue: 'NGUYEN KHAC MANH', description: 'This is field for the Name of you')
@@ -21,6 +21,16 @@ pipeline {
 				sh 'echo "this is name cmd ${AVAILABLE}"'
 				sh 'echo "this is name cmd ${PASSWORD}"'
 				sh 'echo -----------'
+			}
+		}
+		stage('environment') {
+			environment { 
+			    GITHUB = credentials('githubssh') 
+			}
+			steps {
+			    sh 'printenv'
+			    echo '-------'
+			    sh 'echo $GITHUB'
 			}
 		}
 	}
